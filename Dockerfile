@@ -1,6 +1,12 @@
-FROM node:22-alpine
+FROM rust:1.79-alpine AS build
+RUN apk add --no-cache musl-dev
+WORKDIR /src
+COPY Cargo.toml ./
+COPY src ./src
+RUN cargo build --release
+
+FROM alpine:3.20
 WORKDIR /app
-COPY package.json ./
-COPY server.js ./
+COPY --from=build /src/target/release/app /app/app
 EXPOSE 3000
-CMD ["npm", "start"]
+CMD ["/app/app"]
