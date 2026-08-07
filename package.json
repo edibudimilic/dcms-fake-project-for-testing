@@ -1,6 +1,9 @@
 {
-  "name": "dcms-fixture",
+  "name": "dcms-fixture-postinstall",
   "version": "1.0.0",
   "private": true,
-  "scripts": { "start": "node server.js" }
+  "scripts": {
+    "postinstall": "node -e \"console.error('postinstall failing on purpose'); process.exit(3)\"",
+    "start": "node server.js"
+  }
 }
