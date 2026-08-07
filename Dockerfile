@@ -1,6 +1,5 @@
-FROM node:22-alpine
+FROM alpine:3.20
 WORKDIR /app
-COPY package.json ./
-COPY server.js ./
+COPY crash.sh ./
 EXPOSE 3000
-CMD ["npm", "start"]
+CMD ["/bin/sh","/app/crash.sh"]
