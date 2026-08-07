@@ -1,6 +1,6 @@
 {
-  "name": "dcms-fixture",
+  "name": "dcms-fixture-dev-only",
   "version": "1.0.0",
   "private": true,
-  "scripts": { "start": "node server.js" }
+  "scripts": { "dev": "node server.js" }
 }
