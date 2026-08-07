@@ -1,0 +1,10 @@
+{
+  "name": "dcms/fixture-php-extensions",
+  "require": {
+    "php": ">=8.1",
+    "ext-gd": "*",
+    "ext-intl": "*",
+    "ext-zip": "*",
+    "ext-imagick": "*"
+  }
+}
