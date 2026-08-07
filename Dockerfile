@@ -1,6 +1,7 @@
-FROM node:22-alpine
+FROM ruby:3.3-alpine
 WORKDIR /app
-COPY package.json ./
-COPY server.js ./
+COPY Gemfile ./
+RUN bundle install
+COPY server.rb ./
 EXPOSE 3000
-CMD ["npm", "start"]
+CMD ["ruby","server.rb"]
