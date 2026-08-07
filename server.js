@@ -1,6 +1,6 @@
 const http = require('http');
 const port = process.env.PORT || 3000;
-const marker = process.env.DCMS_FIXTURE_MARKER || 'dcms-fixture-ok';
+const marker = process.env.DCMS_FIXTURE_MARKER || 'dcms-fixture-force-push-v1';
 http.createServer((req, res) => {
   if (req.url === '/health') { res.writeHead(200); return res.end('ok'); }
   res.writeHead(200, { 'Content-Type': 'text/html' });
