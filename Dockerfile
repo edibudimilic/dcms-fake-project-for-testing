@@ -1,6 +1,6 @@
 FROM node:22-alpine
 WORKDIR /app
-COPY package.json ./
-COPY server.js ./
+COPY package.json server.js ./
+ENV DCMS_OWN_DOCKERFILE=yes
 EXPOSE 3000
-CMD ["npm", "start"]
+CMD ["node","server.js"]
