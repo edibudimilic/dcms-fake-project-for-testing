@@ -1,6 +1,5 @@
-FROM node:22-alpine
+FROM denoland/deno:alpine-2.1.4
 WORKDIR /app
-COPY package.json ./
-COPY server.js ./
+COPY main.ts .
 EXPOSE 3000
-CMD ["npm", "start"]
+CMD ["run","--allow-net","--allow-env","main.ts"]
