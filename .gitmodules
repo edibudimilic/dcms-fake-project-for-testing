@@ -1,0 +1,4 @@
+[submodule "vendor/self"]
+	path = vendor/self
+	url = https://github.com/edibudimilic/dcms-fake-project-for-testing.git
+	branch = main
