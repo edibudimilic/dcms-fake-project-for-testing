@@ -1,6 +1,5 @@
-FROM node:22-alpine
+FROM php:8.3-cli-alpine
 WORKDIR /app
-COPY package.json ./
-COPY server.js ./
+COPY index.php ./
 EXPOSE 3000
-CMD ["npm", "start"]
+CMD ["sh","-c","php -S 0.0.0.0:${PORT:-3000} -t /app"]
