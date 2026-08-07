@@ -1,0 +1,3 @@
+:80 {
+  respond "edge stage - the app was NOT deployed" 200
+}

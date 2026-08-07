@@ -1,6 +1,1 @@
-{
-  "name": "dcms-fixture",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": { "start": "node server.js" }
-}
+{ "name": "dcms-multistage-edge-independent", "version": "1.0.0", "scripts": { "start": "node server.js" } }
