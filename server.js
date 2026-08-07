@@ -1,5 +1,5 @@
 const http = require('http');
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4567;
 const marker = process.env.DCMS_FIXTURE_MARKER || 'dcms-fixture-ok';
 http.createServer((req, res) => {
   if (req.url === '/health') { res.writeHead(200); return res.end('ok'); }
